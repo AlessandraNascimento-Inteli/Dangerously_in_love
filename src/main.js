@@ -1,13 +1,14 @@
-// Definindo a largura e altura da página
+// Definindo a largura e altura da página conforme a tela do dispositivo
 var width =  window.innerWidth;
 var height = window.innerHeight;
 
 var config = {
     type: Phaser.AUTO,
-    width: width,
-    height: height,
+    width: width, // ajusta à tela do jogador
+    height: height, // ajusta à tela do jogador
     physics: {
 
+    // tipo de jogo e configuração de gravidade
     default: 'arcade', 
     arcade: {
         gravity: {y: 300},
@@ -15,7 +16,8 @@ var config = {
 
         }
     },
-
+    
+    // instanciação de cenas
     scene: 
         [TelaInicial, CatGame, TelaFinal]
 };
