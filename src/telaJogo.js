@@ -88,6 +88,8 @@ class CatGame extends Phaser.Scene {
             this.physics.pause();
             this.scene.start("TelaFinal")
         })
+
+        this.instrucoes = this.add.text(largura/2, 100, "Utilize as teclas < e > do seu teclado\npara movimentar o gatinho.\nPegue as cartas e fuja das bombas!", {fontSize: 30, fill: '#495613'})
             
     }
 
