@@ -6,7 +6,7 @@ class TelaInicial extends Phaser.Scene {
     preload(){
         this.load.image('bg-telaInicial', 'assets/telaPrincipal-bg.png');
         this.load.image('startBotao', 'assets/botaoStart.png');
-        this.load.image('gatinhos', 'assets/lovers.png');
+        this.load.image('gatinhos', 'assets/lovers.PNG');
         this.load.image('textoTitulo', 'assets/tituloJogo.png');
     }
 
@@ -18,14 +18,15 @@ class TelaInicial extends Phaser.Scene {
         .setOrigin(0.5, 0.5)
         .setDisplaySize(largura, altura);
 
-        this.titulo = this.add.image(largura/2, altura/2, 'textoTitulo')
+        this.titulo = this.add.image(largura/2, 100, 'textoTitulo')
         .setOrigin(0.5, 0.5)
-        .setScale(0.2, 0.2);
+        .setScale(2);
 
-        this.gatinhosAmor = this.add.image(largura/2, 700, 'gatinhos')
-        .setOrigin(0.5, 0.5);
+        this.gatinhosAmor = this.add.image(largura/2, 350, 'gatinhos')
+        .setOrigin(0.5, 0.5)
+        .setScale(0.8);
 
-        this.start = this.add.image(largura - 600, 500, 'startBotao')
+        this.start = this.add.image(largura - 850, 550, 'startBotao')
         .setOrigin(0.3, 0.3)
         .setScale(0.5, 0.5)
         .setInteractive()
