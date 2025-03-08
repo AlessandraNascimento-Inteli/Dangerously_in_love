@@ -26,7 +26,7 @@ class TelaInicial extends Phaser.Scene {
 
         this.gatinhosAmor = this.add.image(largura/2, 350, 'gatinhos') // adição de imagem que represente a história do jogo
         .setOrigin(0.5, 0.5)
-        .setScale(0.5);
+        .setScale(0.7);
 
         this.start = this.add.image(largura - 850, 550, 'startBotao') // adição do botão de iniciar o jogo
         .setOrigin(0.3, 0.3)
