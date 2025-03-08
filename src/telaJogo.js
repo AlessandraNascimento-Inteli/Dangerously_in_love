@@ -34,10 +34,16 @@ class CatGame extends Phaser.Scene {
 
         this.cartinha.setBounce(0.5);
 
-        this.bombinha = this.physics.add.image(300, 110, 'bombinha')
-        .setCollideWorldBounds(true)
-        .setScale(0.4, 0.4)
-        .refreshBody();
+        do {
+            this.bombinha = this.physics.add.image(
+                Phaser.Math.Between(0, largura),
+                Phaser.Math.Between(0, altura),
+                'bombinha'
+            ).setCollideWorldBounds(true)
+            .setScale(0.4);
+        } while (Phaser.Geom.Intersects.RectangleToRectangle(
+            this.gatinho.getBounds(), this.bombinha.getBounds()
+        ));
         
         this.bombinha.body.onWorldBounds = true;
 
